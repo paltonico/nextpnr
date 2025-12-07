@@ -1,6 +1,5 @@
 LOCAL_PATH := $(call my-dir)
 
-# Only for native builds. For cross build, use python3 repository.
 ifeq ("$(TARGET_OS_FLAVOUR)","native")
 
 include $(CLEAR_VARS)
@@ -16,7 +15,7 @@ LOCAL_CMAKE_CONFIGURE_ARGS := \
 	-DCMAKE_CROSSCOMPILING=false \
 	-DPython3_EXECUTABLE=$(TARGET_OUT_STAGING)/$(TARGET_ROOT_DESTDIR)/bin/python
 
-LOCAL_LIBRARIES := apicula
+LOCAL_LIBRARIES := apycula
 
 include $(BUILD_CMAKE)
 
